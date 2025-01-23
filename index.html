@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3cda18d1e6.js" crossorigin="anonymous"></script>
+    <style>
+        .Box{
+            border: 1px solid black;
+            height: 130px;
+            width:900px;
+            background-color: #fff;
+            display:flex ;
+            flex-direction: column;
+        }
+        .Box input{
+            height: 65px;
+            width:auto;
+            font-size:48px;
+            text-align: right;
+        }
+        .Box1{
+            
+            display:inline-block ;
+        }
+        .in{
+            height: 100px;
+            width:850px;
+            
+        }
+        button{
+            height: 70px;
+            width: 176px;
+            font-size:25px;
+         }
+         .History{
+            border: 1px solid black;
+            height:571px;
+            width:350px;
+            background-color: #fff;
+           
+        }
+        .header{
+            height:35px;
+            width:auto;
+            border: 1px solid black;
+            text-align: right;
+        }
+        #subHis{
+            height:480px;
+            width:auto;
+            border: 1px solid black;
+        }
+        .footer{
+            height:50px;
+            width:auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer button{
+            height:30px;
+            width:auto;
+            border: 1px solid black;
+            display: flex;
+            text-align: center;
+            
+        }
+        body {
+            display: flex;
+            background-color: pink;
+            }
+        @media screen and (min-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="Box">
+           <input type="text" id="subVal" value="">
+           <input type="text" id="inputVal" value="0">
+        </div>
+        <div classs="Box1">
+            <table>
+                <tr>
+                    <th><button onclick="getValue()"><i class="fa-solid fa-clock-rotate-left fa-xl"></i></button></th>
+                    <th><button onclick="getValue('')">Rad</button></th>
+                    <th><button onclick="getValue('')">Deg</button></th>
+                    <th><button onclick="clearAll()">CE</button></th>
+                    <th><button onclick="clearSD()">C</button></th>
+
+                </tr>
+                
+                <tr>
+                    <td><button onclick="getValue('')">1/x</button></td>
+                    <td><button onclick="getValue('&#40;')">(</button></td>
+                    <td><button onclick="getValue('&#41;')">)</button></td>
+                    <td><button onclick="getValue('')">log</button></td>
+                    <td><button onclick="getValue('%')"><i class="fa-solid fa-percent fa-xl"></i></button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="getValue('')">x!</button></td>
+                    <td><button onclick="getValue('1')" >1</button></td>
+                    <td><button onclick="getValue('2')" >2</button></td>
+                    <td><button onclick="getValue('3')" >3</button></td>
+                    <td><button ><i class="fa-solid fa-divide fa-xl"></i></button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="getValue('')"><i class="fa-solid fa-square-root-variable fa-xl"></i></button></td>
+                    <td><button onclick="getValue('4')" >4</button></td>
+                    <td><button onclick="getValue('5')" >5</button></td>
+                    <td><button onclick="getValue('6')" >6</button></td>
+                    <td><button ><i class="fa-solid fa-xmark fa-xl"></i></button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="getValue('')"><i class="fa-solid fa-superscript fa-xl"></i></button></td>
+                    <td><button onclick="getValue('7')" >7</button></td>
+                    <td><button onclick="getValue('8')" >8</button></td>
+                    <td><button onclick="getValue('9')" >9</button></td>
+                    <td><button onclick="getValue('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="getValue('')" >π</button></td>
+                    <td><button onclick="getValue('0')" >0</button></td>
+                    <td><button onclick="getValue('.')" >.</button></td>
+                    <td><button onclick="getValue('=')" >=</button></td>
+                    <td><button onclick="getValue('-')" >-</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="History">
+        <div class="header"><p style="font-size:17px;margin-right:5px;"><b>History</b><p></div>
+        <div id="subHis"></div>
+        <div class="footer">
+            <button>
+                Clear All
+            </button>
+        </div>
+    </div>
+    <script src="Cal.js">
+
+    </script>
+</body>
+</html>
